@@ -4,6 +4,14 @@ public class BankAccount {
     int id;
     String name;
     double balance;
+
+    void popolnenieScheta(double plus){
+        balance += plus;
+    }
+
+    void snyatieSoScheta(double minus){
+        balance -= minus;
+    }
 }
 
 class BankAccountTest{
@@ -24,7 +32,10 @@ class BankAccountTest{
         hisAccount.name = "Ivan";
         hisAccount.balance = 124.12;
 
-        System.out.println(myAccount.id);
-        System.out.println(hisAccount.name);
+        System.out.println("Тукущее состояние счета: " + myAccount.balance);
+        myAccount.popolnenieScheta(156.00);
+        System.out.println("Произошло пополнение счета на 156.00. Теперь баланс счета: " + myAccount.balance);
+        myAccount.snyatieSoScheta(50.00);
+        System.out.println("Произошло списание со счета в размере 50.00. Теперь баланс счета: " + myAccount.balance);
     }
 }

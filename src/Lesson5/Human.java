@@ -41,4 +41,12 @@ class BankAccount{
         id = id2;
         balance = balance2;
     }
+
+    void popolnenieScheta(double plus){
+        balance += plus;
+    }
+
+    void snyatieSoScheta(double minus){
+        balance -= minus;
+    }
 }
