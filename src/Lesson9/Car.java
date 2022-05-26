@@ -5,7 +5,7 @@ public class Car {
     String engine;
     static int  count;
 
-    Car(String color2, String engine2){
+    public Car(String color2, String engine2){
         count++;
         color = color2;
         engine = engine2;
