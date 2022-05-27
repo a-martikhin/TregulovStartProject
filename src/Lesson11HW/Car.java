@@ -15,22 +15,23 @@ public class Car {
 }
 
 class CarTest{
-    static void changeDoorQty(int delta, Car c1){
+    void changeDoorQty(int delta, Car c1){
         c1.doorQty += delta;
     }
 
-    static void swapColor(Car c1, Car c2){
+    void swapColor(Car c1, Car c2){
         String s = c1.color;
         c1.color = c2.color;
         c2.color = s;
     }
 
     public static void main(String[] args) {
+        CarTest cT = new CarTest();
         Car c1 = new Car("Red","V6", 3);
         Car c2 = new Car("Black", "V3", 5);
-        changeDoorQty(2, c1);
+        cT.changeDoorQty(2, c1);
         System.out.println(c1.doorQty);
-        swapColor(c1, c2);
+        cT.swapColor(c1, c2);
         System.out.println(c1.color);
         System.out.println(c2.color);
 
